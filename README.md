@@ -11,7 +11,7 @@ Tecnologias Utilizadas
 - Vue Router (Para o sistema de rotas)<br/>
 - Axios (Para requisições http)<br/>
 - Pínia (Para gerenciamento de estados)
-- API "A Bíblia Digital" (Consumo dos dados)
+- API "A Bíblia Digital" (Consumo dos recursos)
 
 ## 🚀 Link da Aplicação
 
