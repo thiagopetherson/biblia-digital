@@ -17,7 +17,7 @@ Tecnologias Utilizadas
 Segue o link da aplicação hospedada.<br/>
 Link: https://biblia-digital.netlify.app/<br/><br/>
 
-![Screenshot from 2023-01-12 16-13-54](https://user-images.githubusercontent.com/44420212/212160041-402b4e8a-f603-41dc-b88f-5bdc3bc285cc.png)
+![Screenshot from 2023-01-12 16-15-47](https://user-images.githubusercontent.com/44420212/212160349-5668dce9-67ce-4d50-88e1-4323badc7039.png)
 
 ## Install the dependencies
 ```bash
