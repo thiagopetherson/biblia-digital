@@ -1,5 +1,5 @@
 <template>
-  <q-page class="row">
+  <q-page class="row" v-if="!loading">
     <div class="col-12 text-center">
       <h3 v-if="quasar.platform.is.desktop" style="margin-bottom: 0px;">{{ storeBook.name }}</h3>
       <h5 v-else style="padding:0; margin: 20px 0 20px 0">{{ storeBook.name }}</h5>
@@ -42,6 +42,7 @@ export default defineComponent({
     const optionSelected = ref(1)
     const numberOfChapter = ref(1)
     const chapterVerses = ref([])
+    const loading = ref(false)
 
     const getChapterVerses = async () => {
       showLoading()
@@ -52,7 +53,7 @@ export default defineComponent({
       } catch (error) {
         console.log(error)
       } finally {
-        quasar.loading.hide()
+        hideLoading()
       }
     }
 
@@ -71,6 +72,7 @@ export default defineComponent({
     })
 
     const showLoading = () => {
+      loading.value = true
       quasar.loading.show({
         spinner: QSpinnerFacebook,
         message: 'Seus dados estão sendo carregador. Um momento, por favor...',
@@ -80,6 +82,11 @@ export default defineComponent({
         messageColor: 'white'
 
       })
+    }
+
+    const hideLoading = () => {
+      quasar.loading.hide()
+      loading.value = false
     }
 
     watch(() => route.params.book, (newValue) => {
@@ -100,6 +107,7 @@ export default defineComponent({
       optionSelected,
       arrayNumberOfChapter,
       reloadChapterVerses,
+      loading,
       quasar
     }
   }

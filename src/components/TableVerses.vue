@@ -30,8 +30,8 @@
             </q-card-section>
             <q-separator />
             <q-card-section class="flex flex-center">
-              <div class="text-bolder" :class="!quasar.platform.is.desktop ? 'text-body2' : 'text-body2'">
-                {{ props.row.text }}
+              <div class="text-bolder table-description" :class="!quasar.platform.is.desktop ? 'text-body2' : 'text-body1'">
+                <span :class="!quasar.dark.isActive ? 'text-grey-8' : ''">{{ props.row.text }}</span>
               </div>
             </q-card-section>
           </q-card>
@@ -105,3 +105,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="sass" scoped>
+.table-description
+  font-family: "Open Sans", sans-serif
+
+</style>
