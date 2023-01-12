@@ -1,7 +1,7 @@
 {
-  "name": "quasar-biblia",
+  "name": "biblia-digital",
   "version": "0.0.1",
-  "description": "A Quasar Project",
+  "description": "Um Projeto Quasar Framework",
   "productName": "Bíblia Digital",
   "author": "thiagopetherson <thiagopetherson@outlook.com>",
   "private": true,
